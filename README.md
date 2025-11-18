@@ -25,6 +25,8 @@ _Mobile menu Hamburger Id._(Default : sm_menu_ham)
 _Mobile menu wrapper element class._(Default : sm_menu_outer)
 *  **menuStyle**<br/>
 _2 Menu Styles : Slide & Accordion._(Default : slide)
+*  **menuContainer**<br/>
+_Custom container selector where the hamburger and menu wrapper will be appended. If not specified or if the selector doesn't match any element, the menu will be appended to the body._(Default : null)
 ## Callbacks
 
 *  **onMenuLoad**<br/>
@@ -92,6 +94,8 @@ $(document).ready(function() {
     "submenuClass" : "submenu",
     //Menu Style
     "menuStyle" : "slide",
+    //Menu Container (optional) - selector for custom container
+    "menuContainer" : null, // e.g., "#header" or ".nav-container"
     // Callback - Menu loaded 
     "onMenuLoad" : function(menu) {
        console.log("menu loaded")
