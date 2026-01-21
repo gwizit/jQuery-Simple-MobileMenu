@@ -18,7 +18,7 @@ $(document).ready(function(){
 ## Plugin Options
 
 *  **submenuClass**<br/>
-_Mobile menu submenu class.This class should be there in each submenu UL's_(Default : submenu)
+_Mobile menu submenu class.This class should be there in each submenu UL's_(Default : sub-menu)
 *  **hamburgerId**<br/>
 _Mobile menu Hamburger Id._(Default : sm_menu_ham)
 *  **wrapperClass**<br/>
@@ -27,6 +27,10 @@ _Mobile menu wrapper element class._(Default : sm_menu_outer)
 _2 Menu Styles : Slide & Accordion._(Default : slide)
 *  **menuContainer**<br/>
 _Custom container selector where the hamburger and menu wrapper will be appended. If not specified or if the selector doesn't match any element, the menu will be appended to the body._(Default : null)
+*  **enableBreadcrumbs**<br/>
+_Enable breadcrumb navigation within the mobile menu. When enabled, a breadcrumb trail is shown at the top of the menu allowing users to navigate back through submenu levels._(Default : false)
+*  **homeText**<br/>
+_The text to display for the home/root level in the breadcrumb navigation._(Default : "Home")
 ## Callbacks
 
 *  **onMenuLoad**<br/>
@@ -91,11 +95,15 @@ $(document).ready(function() {
     //Menu Wrapper Class
     "wrapperClass" : "sm_menu_outer", 
     //Submenu Class
-    "submenuClass" : "submenu",
+    "submenuClass" : "sub-menu",
     //Menu Style
     "menuStyle" : "slide",
     //Menu Container (optional) - selector for custom container
     "menuContainer" : null, // e.g., "#header" or ".nav-container"
+    //Enable Breadcrumbs Navigation
+    "enableBreadcrumbs" : true,
+    //Home Text for Breadcrumbs
+    "homeText" : "Home",
     // Callback - Menu loaded 
     "onMenuLoad" : function(menu) {
        console.log("menu loaded")
